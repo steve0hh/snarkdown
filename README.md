@@ -9,6 +9,18 @@ Snarkdown is a dead simple **1kb** [Markdown] parser.
 
 It's designed to be as minimal as possible, for constrained use-cases where a full Markdown parser would be inappropriate.
 
+This fork of [snarkdown](https://github.com/developit/snarkdown) encompasses of customization for my use cases.
+
+## Customization
+
+These are a list of customizations that I've done:
+
+**Opens links with new tabs**
+
+```javascript
+> snarkdown('[Snarkdown::newtab](http://github.com/steve0hh/snarkdown)'))
+<- <a href="http://github.com/steve0hh/snarkdown" target="_blank">Snarkdown</a>'
+```
 
 ## Features
 

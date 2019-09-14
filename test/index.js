@@ -49,6 +49,10 @@ describe('snarkdown()', () => {
 			expect(snarkdown('[Snarkdown](http://github.com/developit/snarkdown)')).to.equal('<a href="http://github.com/developit/snarkdown">Snarkdown</a>');
 		});
 
+		it('parses links which opens new tab', () => {
+			expect(snarkdown('[Snarkdown::newtab](http://github.com/developit/snarkdown)')).to.equal('<a href="http://github.com/developit/snarkdown" target="_blank">Snarkdown</a>');
+		});
+
 		it('parses anchor links', () => {
 			expect(snarkdown('[Example](#example)')).to.equal('<a href="#example">Example</a>');
 		});
